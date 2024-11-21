@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "cd backend && npm start",
+    "prebuild": "cd backend & call npm install & cd ../frontend & call npm install",
     "build": "cd frontend && npm run build",
-    "postbuild":"move /Y frontend\\build backend\\src\\public"
-
+    "postbuild": "move /y frontend\\build backend\\src\\public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  "engines": {
+    "node":">=18 <19" 
   }
 }
